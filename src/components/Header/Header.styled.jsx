@@ -5,7 +5,8 @@ export const Wrapper = styled.div`
     align-items: center;
     justify-content: space-around;
     gap: 30px;
-    max-width: 1280px;
+    width: 100%;
+    /* max-width: 1280px; */
     /* height: 100vh; */
     margin: 0 auto;
     padding: 20px;
@@ -23,6 +24,12 @@ export const Adres = styled.p`
 export const Phones = styled.div`
     
 `;
+
+export const ButtonWrap = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+`
 
 export const Button = styled.button`
 padding: 10px;

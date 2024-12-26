@@ -1,19 +1,26 @@
+import { Link, useNavigate } from "react-router-dom";
 import { NavList, NavItem } from "./Navigation.styled";
 
 export default function Navigation() {
+    // const navigate = useNavigate();
+
+    // const handleWindows = () => {
+    //     navigate('');
+    // }
+
     return (
         <NavList>
-            <NavItem>
-                <a>Окна</a>
+            <NavItem >
+                <Link to="/windows">Окна</Link>
             </NavItem>
             <NavItem>
-                <a>Двери</a>
+                <Link to="doors">Двери</Link>
             </NavItem>
             <NavItem>
-                <a>Балконы</a>
+                <Link to="balcons">Балконы</Link>
             </NavItem>
             <NavItem>
-                <a>Контакты</a>
+                <Link to="contacts">Контакты</Link>
             </NavItem>
         </NavList>
     )
