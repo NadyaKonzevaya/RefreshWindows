@@ -1,8 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import { Wrapper, Title, Form, Sizes, Image, InputWrapper, SizeText, Input, Description, Configuration, OptionList, OptionItem, Select, ImageSmall, Label, Extras, ExtraWrap, ExtraLabel } from './Calculator.styled';
 import window from '../../images/window.png';
 import { Button } from '../Header/Header.styled';
 
 export default function Calculator() {
+     const navigate = useNavigate();
+
+    const handleCalculate = () => {
+        navigate('/calculator');
+    }
     return (
         <Wrapper>
             <Title>Калькулятор</Title>
@@ -11,11 +17,11 @@ export default function Calculator() {
                     <Image src={window} alt="window" />
                     {/* <SizesWrapper> */}
                     <InputWrapper>
-                        <Input type="number"></Input>
+                        <Input type="number" defaultValue={1200}></Input>
                         <SizeText>ширина, мм</SizeText>
                     </InputWrapper>
                     <InputWrapper>
-                        <Input type="number"></Input>
+                        <Input type="number" defaultValue={1200}></Input>
                         <SizeText>высота, мм</SizeText>
                     </InputWrapper>
                    {/* </SizesWrapper> */}
@@ -23,11 +29,11 @@ export default function Calculator() {
             </Sizes>
             <Description>
                     <Configuration>
-                        <h2>Конфигурация</h2>
+                        <Button type="button" onClick={handleCalculate}>Конфигурация</Button>
                         <OptionList>
                             <OptionItem>
                                 <ImageSmall src={window} alt="window1" />
-                                <input type="radio" name="size" id="1"/>
+                                <input type="radio" name="size" id="1" defaultChecked/>
                                 <Label htmlFor="1">Глухое окно</Label>
                             </OptionItem>
                             <OptionItem>
